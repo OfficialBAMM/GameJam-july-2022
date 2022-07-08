@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: All the way at the back
+    uniqueID: 757085029
+    locked: 0
+  - name: Bottom Leg or arm
+    uniqueID: 2596278617
+    locked: 0
+  - name: Top leg or arm
+    uniqueID: 2344845189
+    locked: 0
+  - name: Head
+    uniqueID: 862907303
+    locked: 0
+  - name: Outer Eyes
+    uniqueID: 3184349749
+    locked: 0
+  - name: Inner Eyes
+    uniqueID: 782498133
+    locked: 0
+  - name: All the way at the front
+    uniqueID: 447929393
+    locked: 0
