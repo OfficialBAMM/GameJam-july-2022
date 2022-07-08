@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 
 public class BasicDream : MonoBehaviour
 {
-    [SerializeField] protected GameObject particle;
-    [SerializeField] protected Transform particleSpawnPoint;
-    [SerializeField] protected Transform particleDirection;
+    [SerializeField] protected GameObject bullet;
+    [SerializeField] protected Transform bulletSpawnPoint;
 
     private void Start()
     {
@@ -15,6 +13,9 @@ public class BasicDream : MonoBehaviour
     {
     }
 
-    public virtual float Shoot()
+    public virtual float GetSleepTime()
     { return 0f; }
+
+    public virtual void Shoot()
+    { }
 }

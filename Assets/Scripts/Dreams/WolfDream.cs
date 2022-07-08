@@ -1,19 +1,17 @@
-using System;
 using UnityEngine;
 
 public class WolfDream : BasicDream
 {
     [SerializeField] private float speed;
 
-    public override float Shoot()
+    public override float GetSleepTime()
     {
-        FireProjectile();
         return 4f;
     }
 
-    private void FireProjectile()
+    public override void Shoot()
     {
-        GameObject bullet = Instantiate(this.particle, particleSpawnPoint) as GameObject;
+        GameObject bullet = Instantiate(this.bullet, bulletSpawnPoint);
         Vector3 lookPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;

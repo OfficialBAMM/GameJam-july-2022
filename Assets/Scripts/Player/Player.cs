@@ -29,7 +29,9 @@ public class Player : MonoBehaviour
         {
             if (dreamList[0])
             {
-                float timeToSleep = dreamList[0].GetComponent<BasicDream>().Shoot();
+                dreamList[0].GetComponent<BasicDream>().Shoot();
+
+                float timeToSleep = dreamList[0].GetComponent<BasicDream>().GetSleepTime();
 
                 IEnumerator coroutine = GoToSleepFor(timeToSleep);
                 StartCoroutine(coroutine);
