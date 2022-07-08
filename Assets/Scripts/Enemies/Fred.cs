@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Fred : MonoBehaviour
@@ -20,7 +19,6 @@ public class Fred : MonoBehaviour
     private void Update()
     {
         distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
-        Debug.Log(distanceToPlayer);
 
         if (distanceToPlayer >= detectionDistance)
         {
