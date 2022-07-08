@@ -50,6 +50,9 @@ TagManager:
   - name: Top leg or arm
     uniqueID: 2344845189
     locked: 0
+  - name: Torso
+    uniqueID: 303595107
+    locked: 0
   - name: Head
     uniqueID: 862907303
     locked: 0
