@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2834363655039308145}
   - component: {fileID: 2834363655039308156}
-  - component: {fileID: 2834363655039308159}
+  - component: {fileID: 2445845420726382580}
   - component: {fileID: 2834363655039308158}
   m_Layer: 0
   m_Name: Player
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45884d3ec88456488fab14232353fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2834363655039308159
+--- !u!114 &2445845420726382580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2834363655039308158}
-  movementSpeed: 0
+  movementSpeed: 7.5
 --- !u!50 &2834363655039308158
 Rigidbody2D:
   serializedVersion: 4
