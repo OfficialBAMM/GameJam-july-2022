@@ -31,8 +31,7 @@ public class Pillow : BasicProjectile
     {
         boxCollider.enabled = false;
         enemyHit = true;
-        Destroy(gameObject);
-        rb.gravityScale = 2f;
+        rb.gravityScale = 4f;
 
         if (rb.velocity.x > 0)
             rb.velocity = Vector2.left;

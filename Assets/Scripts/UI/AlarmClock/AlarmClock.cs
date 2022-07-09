@@ -10,9 +10,7 @@ public class AlarmClock : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buttonText;
     [SerializeField] private TextMeshProUGUI clockText;
 
-    private bool alarmIsGoingOff = false;
     private Animator animator;
-    [SerializeField] private UnityEvent events;
 
     private void Awake()
     {

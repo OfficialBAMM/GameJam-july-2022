@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
                 activeGun.GetComponent<BasicGun>().Shoot();
             }
         }
+
         CheckForWalking();
         PlayAnimations();
     }
@@ -60,35 +61,13 @@ public class Player : MonoBehaviour
 
     private void PlayAnimations()
     {
+        animator.SetBool("IsWalking", isWalking);
 
-        if (isWalking)
-        {
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
-        }
-
-        if (input.x < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-        if (input.x > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
+        spriteRenderer.flipX = input.x < 0;
     }
 
     private void CheckForWalking()
     {
-        if (input.x != 0 || input.y != 0)
-        {
-            isWalking = true;
-        }
-        else
-        {
-            isWalking = false;
-        }
+        isWalking = input.x != 0 || input.y != 0;
     }
 }
