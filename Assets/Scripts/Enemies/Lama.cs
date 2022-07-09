@@ -9,7 +9,7 @@ public class Lama : BasicEnemy
     [SerializeField] private GameObject attackSpawnPoint;
     [SerializeField] private float timeBetweenSpit;
 
-    [SerializeField] private float minDistance = 3f;
+
     [SerializeField] private float attackDistance = 4f;
 
     [SerializeField] private float detectionDistance = 10f;
@@ -21,10 +21,10 @@ public class Lama : BasicEnemy
 
     private void Start()
     {
+        minDistance = 5f;
         player = SceneManager.Instance.GetPlayer();
         health = 10;
     }
-
 
     private void Update()
     {

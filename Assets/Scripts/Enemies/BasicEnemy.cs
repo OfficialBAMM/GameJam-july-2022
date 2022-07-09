@@ -2,11 +2,12 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-public class BasicEnemy : MonoBehaviour
+ public class BasicEnemy : MonoBehaviour
 {
     protected Rigidbody2D rb;
     protected BoxCollider2D boxCollider;
 
+    [SerializeField] protected float minDistance = 3f;
     [SerializeField] protected int health;
 
     private void Awake()

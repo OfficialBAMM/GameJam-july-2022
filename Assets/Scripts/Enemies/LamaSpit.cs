@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LamaSpit : MonoBehaviour
 {
-    [SerializeField] GameObject player;
     [SerializeField] float shotSpeed;
     [SerializeField] float despawnTime = 1.5f;
     [SerializeField] float damage = 1;
@@ -12,7 +11,7 @@ public class LamaSpit : MonoBehaviour
 
     private void Start()
     {
-        player = SceneManager.Instance.GetPlayer();
+        GameObject player = SceneManager.Instance.GetPlayer();
         playerPos = player.transform.position;
         Destroy(gameObject, despawnTime);
     }
