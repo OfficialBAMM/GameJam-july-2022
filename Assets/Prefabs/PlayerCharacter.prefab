@@ -364,8 +364,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 447929393
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a8f631ce30806634eba3738bda50207a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &8797210117766143199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,6 +806,7 @@ GameObject:
   - component: {fileID: 8797210118787321210}
   - component: {fileID: 8797210118787321205}
   - component: {fileID: 8797210118787321204}
+  - component: {fileID: 1197885634}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -871,7 +872,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8797210118787321204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +889,32 @@ MonoBehaviour:
   gunList:
   - {fileID: 5335176505085328498, guid: 563845ab54ec5444a8957ca23e5dd99c, type: 3}
   playerSprite: {fileID: 8797210117766143196}
+--- !u!61 &1197885634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797210118787321209}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.027162045, y: -0.5817194}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.511084, y: 0.89587975}
+  m_EdgeRadius: 0
 --- !u!1 &8797210118847522629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,8 +1212,8 @@ Camera:
   m_GameObject: {fileID: 8797210119304027506}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764346659226780829}
   - component: {fileID: 764346659226780830}
+  - component: {fileID: 1689645624}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 757085029
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b72139aa3e1ed3f47bc5b684cbf7bff1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,6 +85,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &1689645624
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764346659226780831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.26147175, y: -14.917175}
+  - {x: -4.022773, y: -14.605327}
+  - {x: -8.276806, y: -14.0791025}
+  - {x: -12.338753, y: -13.142107}
+  - {x: -15.82501, y: -11.807476}
+  - {x: -17.996376, y: -9.96372}
+  - {x: -18.823223, y: -8.866893}
+  - {x: -18.912788, y: -7.7895737}
+  - {x: -18.650646, y: -6.6854076}
+  - {x: -17.423754, y: -5.18148}
+  - {x: -14.155011, y: -3.4261303}
+  - {x: -10.984073, y: -2.5121782}
+  - {x: -7.118938, y: -1.6907501}
+  - {x: -1.545826, y: -1.1399169}
+  - {x: 6.6029105, y: -1.427381}
+  - {x: 11.438763, y: -2.3587942}
+  - {x: 16.136763, y: -4.3441186}
+  - {x: 18.102234, y: -5.930595}
+  - {x: 19.179218, y: -7.7802076}
+  - {x: 18.68346, y: -9.434529}
+  - {x: 16.918114, y: -11.214143}
+  - {x: 13.801756, y: -12.777404}
+  - {x: 9.172498, y: -14.006197}
+  - {x: 4.3535376, y: -14.743603}
+  - {x: 0.23404121, y: -14.905331}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &764346660013970115
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,13 +219,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.044465214
+      value: 0.044465154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 1.1101158
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.42692673
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -243,13 +305,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.044465035
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101161
+      value: 1.1101158
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.9418243
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -313,17 +387,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.04446408
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101161
+      value: 1.1101162
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.9418243
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -387,17 +469,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464916
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101162
+      value: 1.1101161
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.94182444
+      value: 0.9418243
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -461,17 +551,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464797
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101162
+      value: 1.1101161
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.94182444
+      value: 0.9418243
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -535,9 +633,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.9418247
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -601,17 +711,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.04446599
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101161
+      value: 1.1101158
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.9418243
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -675,17 +793,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464678
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101161
+      value: 1.1101158
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.9418243
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -749,9 +875,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.9418247
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -815,13 +953,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044465005
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 1.1101162
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.42692676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -885,17 +1039,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: 0.044464797
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101162
+      value: 1.1101161
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.94182444
+      value: 0.9418243
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -959,13 +1121,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.044465065
+      value: 0.04446557
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 1.1101162
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.42692676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -1029,17 +1207,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.044463843
+      value: 0.044464797
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 1.1101161
+      value: 1.1101158
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.9418243
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
@@ -1103,9 +1289,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waving Tree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992052, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 447929393
+      objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.04446408
+      value: 0.044465035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 1.1101162
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813617539147992053, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.94182444
       objectReference: {fileID: 0}
     - target: {fileID: 1813617539147992055, guid: f2b5be50c128e484fabbdbc42728b067, type: 3}
       propertyPath: m_RootOrder
