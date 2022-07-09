@@ -19,6 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (enemy && spawnPoint)
         {
+            Debug.Log("spawn");
             Instantiate(enemy, spawnPoint.transform);
         }
 
