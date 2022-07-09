@@ -25,7 +25,7 @@ public class AlarmClock : MonoBehaviour
 
     private void AlarmSetOff()
     {
-        EventManager.GameIsInterrupted();
+        EventManager.DestroyDream();
         animator.SetTrigger("Alarm");
     }
 }

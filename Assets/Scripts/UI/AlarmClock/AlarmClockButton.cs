@@ -14,6 +14,12 @@ public class AlarmClockButton : MonoBehaviour
         }
     }
 
+    public void PushedButton()
+    {
+        EventManager.ResumeDream();
+        PlayAnimation();
+    }
+
     public void PlayAnimation()
     {
         animator.SetTrigger("Pressed");

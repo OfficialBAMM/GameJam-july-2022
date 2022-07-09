@@ -5,38 +5,63 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessing : MonoBehaviour
 {
-    PostProcessVolume volume;
+    private PostProcessVolume volume;
     private Vignette vignette;
-    [SerializeField] float vignetteStartingValue = 0.1f;
-    [SerializeField] float vignetteEndingValue = 1;
-    [SerializeField] float vignetteSpeed = 0.51f;   
+
+    private bool dreamIsBeingDestroyed = false;
+
+    [SerializeField] private float vignetteStartingValue = 0.1f;
+    [SerializeField] private float vignetteEndingValue = 1;
+    [SerializeField] private float lerpDuration = 5;
+    [SerializeField] private float survivalRestorePoints = 1;
+
+    private float timeElapsed;
+    private float valueToLerp;
+
+    #region EventManager
 
     private void OnEnable()
     {
-        EventManager.gameInterrupted += ActivateVignet;
-        volume = GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out vignette);
-        vignette.intensity.value = 0;
-        Invoke("StartEvent", 30);
+        EventManager.dreamIsBeingDestroyed += ActivateVignet;
+        EventManager.dreamResumed += DisableVignet;
     }
 
     private void OnDisable()
     {
-        EventManager.gameInterrupted -= ActivateVignet;
+        EventManager.dreamIsBeingDestroyed -= ActivateVignet;
+        EventManager.dreamResumed += DisableVignet;
+    }
+
+    #endregion EventManager
+
+    private void Start()
+    {
+        volume = GetComponent<PostProcessVolume>();
+        volume.profile.TryGetSettings(out vignette);
     }
 
     private void Update()
     {
-        
+        if (dreamIsBeingDestroyed)
+        {
+            if (timeElapsed < lerpDuration)
+            {
+                valueToLerp = Mathf.Lerp(vignetteStartingValue, vignetteEndingValue, timeElapsed / lerpDuration);
+                timeElapsed += Time.deltaTime;
+                vignette.intensity.value = valueToLerp;
+            }
+        }
     }
 
     public void ActivateVignet()
     {
-        vignette.intensity.value = 0.4f;
+        vignette.intensity.value = vignetteStartingValue;
+        dreamIsBeingDestroyed = true;
     }
 
-    public void StartEvent()
+    public void DisableVignet()
     {
-        EventManager.GameIsInterrupted();
+        dreamIsBeingDestroyed = false;
+        vignette.intensity.value -= survivalRestorePoints;
     }
 }
