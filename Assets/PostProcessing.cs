@@ -32,7 +32,7 @@ public class PostProcessing : MonoBehaviour
 
     public void ActivateVignet()
     {
-        vignette.intensity.value = vignetteStartingValu
+        vignette.intensity.value = 0.4f;
     }
 
     public void StartEvent()
