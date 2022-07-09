@@ -1,7 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Fred : BasicEnemy
+public class Lama : BasicEnemy
 {
+    [SerializeField] private GameObject attackSpit;
+    [SerializeField] private GameObject attackSpawnPoint;
+
     [SerializeField] private float minDistance = 3f;
     [SerializeField] private float attackDistance = 4f;
 
@@ -19,6 +24,7 @@ public class Fred : BasicEnemy
         health = 10;
     }
 
+
     private void Update()
     {
         distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
@@ -33,7 +39,7 @@ public class Fred : BasicEnemy
         {
             this.walkToPlayer();
         }
-        else if (distanceToPlayer == minDistance)
+        else if (distanceToPlayer <= minDistance)
         {
             AttackPlayer();
         }
@@ -52,8 +58,9 @@ public class Fred : BasicEnemy
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
+
     void AttackPlayer()
     {
-        
+        Instantiate(attackSpit, attackSpawnPoint.transform.position, Quaternion.identity);
     }
 }

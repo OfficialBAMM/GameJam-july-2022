@@ -22,7 +22,6 @@ public class Pillow : BasicProjectile
         degreesPerSecond = Random.Range(50, 100) * rb.velocity.magnitude;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         base.Update();
@@ -56,6 +55,7 @@ public class Pillow : BasicProjectile
             enemy.GotHit(dmg);
         }
     }
+
     void PlayAudio()
     {
         audioShoot.pitch = Random.Range(0.8f, 1.2f);
