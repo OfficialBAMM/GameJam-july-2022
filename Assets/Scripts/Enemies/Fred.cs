@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fred : MonoBehaviour
+public class Fred : BasicEnemy
 {
     [SerializeField] private float minDistance = 3f;
     [SerializeField] private float attackDistance = 4f;
@@ -13,7 +13,8 @@ public class Fred : MonoBehaviour
 
     private void Start()
     {
-        player = SceneManager.Instance.player;
+        player = SceneManager.Instance.GetPlayer();
+        health = 10;
     }
 
     private void Update()
@@ -32,9 +33,13 @@ public class Fred : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+    }
+
     private void walkIdle()
     {
-        Debug.Log("me is idle");
+        // TODO: Walk idly
     }
 
     private void walkToPlayer()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pillow : BasicProjectile
 {
+    private int dmg = 11;
     private float degreesPerSecond = 20;
     private bool enemyHit = false;
 
@@ -20,6 +21,8 @@ public class Pillow : BasicProjectile
     // Update is called once per frame
     private void Update()
     {
+        base.Update();
+
         if (!enemyHit)
         {
             transform.Rotate(new Vector3(0, 0, -degreesPerSecond) * Time.deltaTime);
@@ -41,9 +44,12 @@ public class Pillow : BasicProjectile
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        BasicEnemy enemy = collision.rigidbody.GetComponentInParent<BasicEnemy>();
+
+        if (enemy)
         {
             enemyCollision();
+            enemy.GotHit(dmg);
         }
     }
 }
