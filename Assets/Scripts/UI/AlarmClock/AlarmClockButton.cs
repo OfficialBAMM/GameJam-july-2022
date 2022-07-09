@@ -12,6 +12,8 @@ public class AlarmClockButton : MonoBehaviour
         {
             Debug.LogError("AlarmClockButton doesn't have animator coupled");
         }
+
+        EventManager.dreamIsBeingDestroyed += PlaySound;
     }
 
     public void PushedButton()
@@ -24,4 +26,10 @@ public class AlarmClockButton : MonoBehaviour
     {
         animator.SetTrigger("Pressed");
     }
+    void PlaySound()
+    {
+
+    }
+
+
 }

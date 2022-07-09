@@ -11,11 +11,13 @@ public class AlarmClock : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clockText;
 
     private Animator animator;
+    private AudioSource alarmSound;
 
     private void Awake()
     {
         Invoke(nameof(AlarmSetOff), 1);
         animator = GetComponent<Animator>();
+        alarmSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -27,5 +29,6 @@ public class AlarmClock : MonoBehaviour
     {
         EventManager.DestroyDream();
         animator.SetTrigger("Alarm");
+        alarmSound.Play();
     }
 }
