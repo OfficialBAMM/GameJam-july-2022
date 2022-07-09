@@ -3,6 +3,7 @@ using UnityEngine;
 public class AlarmClockButton : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    private bool alarmStarted = false;
 
     private void Awake()
     {
@@ -14,12 +15,32 @@ public class AlarmClockButton : MonoBehaviour
 
     public void PushedButton()
     {
-        EventManager.ResumeDream();
+        if (alarmStarted)
+        {
+            EventManager.ResumeDream();
+            alarmStarted = false;
+        }
+
         PlayAnimation();
     }
 
     public void PlayAnimation()
     {
         animator.SetTrigger("Pressed");
+    }
+
+    private void alarmStartedEvent()
+    {
+        alarmStarted = true;
+    }
+
+    private void OnEnable()
+    {
+        EventManager.alarmEvent += alarmStartedEvent;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.alarmEvent -= alarmStartedEvent;
     }
 }

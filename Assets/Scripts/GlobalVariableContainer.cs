@@ -16,8 +16,6 @@ public class GlobalVariableContainer : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        FindPlayer();
     }
 
     private void FindPlayer()
@@ -34,6 +32,8 @@ public class GlobalVariableContainer : MonoBehaviour
 
     public GameObject GetPlayer()
     {
+        FindPlayer();
+
         return player;
     }
 }
