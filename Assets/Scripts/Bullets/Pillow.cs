@@ -47,7 +47,7 @@ public class Pillow : BasicProjectile
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        BasicEnemy enemy = collision.rigidbody.GetComponentInParent<BasicEnemy>();
+        BasicEnemy enemy = collision?.rigidbody?.GetComponentInParent<BasicEnemy>();
 
         if (enemy)
         {

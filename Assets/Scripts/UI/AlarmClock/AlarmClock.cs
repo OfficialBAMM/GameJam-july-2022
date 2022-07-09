@@ -30,7 +30,7 @@ public class AlarmClock : MonoBehaviour
     {
         EventManager.DestroyDream();
         animator.SetTrigger("Alarm");
-        alarmSound.Play();
+        //alarmSound.Play();
     }
 
     private void AlarmStopped()

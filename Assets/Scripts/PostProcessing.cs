@@ -61,7 +61,10 @@ public class PostProcessing : MonoBehaviour
 
     public void DisableVignet()
     {
-        dreamIsBeingDestroyed = false;
-        vignette.intensity.value -= survivalRestorePoints;
+        if (dreamIsBeingDestroyed)
+        {
+            dreamIsBeingDestroyed = false;
+            vignette.intensity.value -= survivalRestorePoints;
+        }
     }
 }
