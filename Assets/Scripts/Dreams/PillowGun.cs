@@ -1,13 +1,8 @@
 using UnityEngine;
 
-public class WolfDream : BasicDream
+public class PillowGun : BasicGun
 {
-    [SerializeField] private float speed;
-
-    public override float GetSleepTime()
-    {
-        return 4f;
-    }
+    [SerializeField] private float bulletSpeed;
 
     public override void Shoot()
     {
@@ -17,6 +12,6 @@ public class WolfDream : BasicDream
         float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        bullet.GetComponent<Rigidbody2D>().velocity = lookPos.normalized * speed;
+        bullet.GetComponent<Rigidbody2D>().velocity = lookPos.normalized * bulletSpeed;
     }
 }

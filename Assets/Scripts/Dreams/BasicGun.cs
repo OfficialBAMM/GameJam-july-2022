@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasicDream : MonoBehaviour
+public class BasicGun : MonoBehaviour
 {
     [SerializeField] protected GameObject bullet;
     [SerializeField] protected Transform bulletSpawnPoint;
