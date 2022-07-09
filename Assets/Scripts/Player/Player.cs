@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float movementSpeed = 195f;
     [SerializeField] public List<GameObject> gunList;
 
+    private GameObject activeGun;
+
     private Rigidbody2D rb;
     private Vector2 input;
     private bool isSleeping;
@@ -15,6 +17,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         this.rb = this.GetComponent<Rigidbody2D>();
+
+        if (gunList[0])
+        {
+            activeGun = Instantiate(gunList[0]);
+            activeGun.transform.SetParent(this.transform);
+            activeGun.transform.position = this.transform.position;
+        }
     }
 
     private void Update()
@@ -27,9 +36,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if (gunList[0])
+            if (activeGun)
             {
-                gunList[0].GetComponent<BasicGun>().Shoot();
+                activeGun.GetComponent<BasicGun>().Shoot();
             }
         }
     }
