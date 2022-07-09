@@ -5,16 +5,36 @@ using UnityEngine.UI;
 
 public class LightBulb : MonoBehaviour
 {
-    [SerializeField] Image imageLightOn;
-    [SerializeField] Image imageLightOff;
+    [SerializeField] Sprite imageLightOn;
+    [SerializeField] Sprite imageLightOff;
+
+    private Image imageSprite;
+
+
+    private void OnEnable()
+    {
+        EventManager.lightEvent += TurnOnLight;
+        EventManager.continueDreaming += TurnOffLight;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.lightEvent -= TurnOnLight;
+        EventManager.continueDreaming -= TurnOffLight;
+    }
+
+    private void Start()
+    {
+        imageSprite = GetComponent<Image>();
+    }
 
     void TurnOnLight()
     {
-
+        imageSprite.sprite = imageLightOn;
     }
 
     void TurnOffLight()
     {
-
+        imageSprite.sprite = imageLightOff;
     }
 }

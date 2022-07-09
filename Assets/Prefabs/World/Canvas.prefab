@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 29346251989406354}
   dark: {r: 0.12941177, g: 0.11764706, b: 0.12156863, a: 1}
-  light: {r: 1, g: 1, b: 1, a: 1}
+  light: {r: 0.496, g: 0.45331147, b: 0.3293115, a: 1}
 --- !u!1 &7196571694995046724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,3 +1461,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6554cf3542aa60048868c0c11276317f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLightOn: {fileID: 21300000, guid: 92c158f43a4cf7f4ea1e3287735fbe79, type: 3}
+  imageLightOff: {fileID: 21300000, guid: 336b0ff5f61ab1141acd1d9c45b17603, type: 3}
