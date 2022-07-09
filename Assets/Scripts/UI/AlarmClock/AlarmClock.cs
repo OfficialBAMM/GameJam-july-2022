@@ -18,6 +18,7 @@ public class AlarmClock : MonoBehaviour
         Invoke(nameof(AlarmSetOff), 1);
         animator = GetComponent<Animator>();
         alarmSound = GetComponent<AudioSource>();
+        EventManager.dreamResumed += AlarmStopped;
     }
 
     private void Update()
@@ -30,5 +31,10 @@ public class AlarmClock : MonoBehaviour
         EventManager.DestroyDream();
         animator.SetTrigger("Alarm");
         alarmSound.Play();
+    }
+
+    private void AlarmStopped()
+    {
+        alarmSound.Stop();
     }
 }

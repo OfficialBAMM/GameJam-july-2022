@@ -9,11 +9,15 @@ public class Pillow : BasicProjectile
     private bool enemyHit = false;
 
     private BoxCollider2D boxCollider;
+    private AudioSource audioShoot;
 
     private void Start()
     {
         base.Start();
         boxCollider = GetComponent<BoxCollider2D>();
+        audioShoot = GetComponent<AudioSource>();
+
+        PlayAudio();
 
         degreesPerSecond = Random.Range(50, 100) * rb.velocity.magnitude;
     }
@@ -51,5 +55,10 @@ public class Pillow : BasicProjectile
             enemyCollision();
             enemy.GotHit(dmg);
         }
+    }
+    void PlayAudio()
+    {
+        audioShoot.pitch = Random.Range(0.8f, 1.2f);
+        audioShoot.Play();
     }
 }
