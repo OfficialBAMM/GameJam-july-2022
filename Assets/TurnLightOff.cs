@@ -16,12 +16,12 @@ public class TurnLightOff : MonoBehaviour
         EventManager.lightEvent -= EnableLightSwitch;
     }
 
-    void EnableLightSwitch()
+    private void EnableLightSwitch()
     {
         lightIsOn = true;
     }
 
-    void DisableLightSwitch()
+    public void DisableLightSwitch()
     {
         if (lightIsOn)
         {

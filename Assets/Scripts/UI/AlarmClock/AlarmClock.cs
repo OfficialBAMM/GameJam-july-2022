@@ -32,6 +32,12 @@ public class AlarmClock : MonoBehaviour
         alarmSound.Stop();
     }
 
+    private void OnEnable()
+    {
+        EventManager.alarmEvent += StartAlarm;
+        EventManager.continueDreaming += StopAlarm;
+    }
+
     private void OnDisable()
     {
         EventManager.alarmEvent -= StartAlarm;

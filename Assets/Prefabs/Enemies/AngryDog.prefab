@@ -155,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 862907303
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e44e11ad50d429a47a375a03f1fe182f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -239,7 +239,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 303595107
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2da1838963df55947b2749f02a0f4790, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -326,11 +326,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fc4bfaaf88aea4fa2709a8a217200e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDistance: 2
   health: 10
-  attackSpit: {fileID: 5163850438973381385, guid: 10b459349a670144897bf774aa7036f6, type: 3}
+  attackSpit: {fileID: 6875982738349349252, guid: 0085a4b0f4830434cb741596a8d5381b, type: 3}
   attackSpawnPoint: {fileID: 8410969999051021639}
   timeBetweenSpit: 5
-  minDistance: 2
   attackDistance: 4
   detectionDistance: 10
   moveSpeed: 2
@@ -426,7 +426,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 862907303
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3d6b9b5ee4b8f5046b663f1ffcc80b5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -652,7 +652,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 862907303
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3d6b9b5ee4b8f5046b663f1ffcc80b5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

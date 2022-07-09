@@ -42,15 +42,15 @@ public class PostProcessing : MonoBehaviour
 
     private void Update()
     {
-        //if (dreamIsBeingDestroyed)
-        //{
-        //    if (timeElapsed < lerpDuration)
-        //    {
-        //        valueToLerp = Mathf.Lerp(vignetteStartingValue, vignetteEndingValue, timeElapsed / lerpDuration);
-        //        timeElapsed += Time.deltaTime;
-        //        vignette.intensity.value = valueToLerp;
-        //    }
-        //}
+        if (dreamIsBeingDestroyed)
+        {
+            if (timeElapsed < lerpDuration)
+            {
+                valueToLerp = Mathf.Lerp(vignetteStartingValue, vignetteEndingValue, timeElapsed / lerpDuration);
+                timeElapsed += Time.deltaTime;
+                vignette.intensity.value = valueToLerp;
+            }
+        }
     }
 
     public void ActivateVignet()
