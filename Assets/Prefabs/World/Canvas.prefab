@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1148679166}
   - component: {fileID: 1148679168}
   - component: {fileID: 1148679167}
+  - component: {fileID: 1148679169}
+  - component: {fileID: 1148679170}
   m_Layer: 5
   m_Name: Eyelid
   m_TagString: Untagged
@@ -27,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 1148679165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15352558, y: 0.72187495, z: 1}
+  m_LocalScale: {x: 0.15352558, y: 0.721875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1401418076}
@@ -77,6 +79,39 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1148679169
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148679165}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ec6c73311cc0dc4fbb515ae35853865, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1148679170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148679165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f758f67e720552d4d88c1f736761d711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1148679169}
 --- !u!1 &1266417310
 GameObject:
   m_ObjectHideFlags: 0
