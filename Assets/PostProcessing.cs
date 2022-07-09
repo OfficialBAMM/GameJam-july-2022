@@ -11,9 +11,9 @@ public class PostProcessing : MonoBehaviour
     private bool dreamIsBeingDestroyed = false;
 
     [SerializeField] private float vignetteStartingValue = 0.1f;
-    [SerializeField] private float vignetteEndingValue = 1;
+    [SerializeField] private float vignetteEndingValue = 1.3f;
     [SerializeField] private float lerpDuration = 5;
-    [SerializeField] private float survivalRestorePoints = 1;
+    [SerializeField] private float survivalRestorePoints = 0.3f;
 
     private float timeElapsed;
     private float valueToLerp;
