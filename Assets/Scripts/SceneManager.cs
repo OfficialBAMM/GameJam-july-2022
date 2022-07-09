@@ -4,8 +4,7 @@ public class SceneManager : MonoBehaviour
 {
     public GameObject player;
 
-    public bool gameIsInterrupted'
-
+    public bool gameIsInterrupted;
 
     public static SceneManager Instance { get; private set; }
 
@@ -26,6 +25,17 @@ public class SceneManager : MonoBehaviour
             Debug.LogError("Motherfucker u forgot the Player tag on the player, or there are multiple. I dunno what is worse tbh. Or I mean if u want multiplayer u do u.");
             return;
         }
+
         this.player = gameObjects[0];
+    }
+
+    public void GameIsInturrupted()
+    {
+        Debug.Log("aight");
+    }
+
+    public void GameIsResumed()
+    {
+        Debug.Log("double aight");
     }
 }

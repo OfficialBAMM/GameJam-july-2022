@@ -656,6 +656,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1317555934010253739, guid: bdab4ac549f2d1a429cd60c900dd0c3c, type: 3}
+      propertyPath: events.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317555934010253739, guid: bdab4ac549f2d1a429cd60c900dd0c3c, type: 3}
+      propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317555934010253739, guid: bdab4ac549f2d1a429cd60c900dd0c3c, type: 3}
+      propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6453158197905423443, guid: bdab4ac549f2d1a429cd60c900dd0c3c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

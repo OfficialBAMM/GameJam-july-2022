@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class AlarmClock : MonoBehaviour
 
     private bool alarmIsGoingOff = false;
     private Animator animator;
+    [SerializeField] private UnityEvent events;
 
     private void Awake()
     {
@@ -25,8 +27,7 @@ public class AlarmClock : MonoBehaviour
 
     private void AlarmSetOff()
     {
+        EventManager.GameIsInterrupted();
         animator.SetTrigger("Alarm");
-
-        alarmIsGoingOff = true;
     }
 }
