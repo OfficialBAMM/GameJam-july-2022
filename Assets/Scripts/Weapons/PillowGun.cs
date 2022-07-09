@@ -3,11 +3,17 @@ using UnityEngine;
 public class PillowGun : BasicGun
 {
     [SerializeField] private float bulletSpeed;
-
     [SerializeField] private float lookPos;
+
+    private readonly float firerate = 0.3f;
 
     public override void Shoot()
     {
+        if (!base.allowedToShoot())
+            return;
+
+        base.shootingCooldown = firerate;
+
         GameObject bullet = Instantiate(this.bullet);
         Vector2 lookPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         bullet.transform.position = bulletSpawnPoint.position;
