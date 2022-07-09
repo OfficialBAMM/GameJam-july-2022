@@ -18,32 +18,32 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 1
+    value: 0
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
   center:
     overrideState: 1
-    value: {x: 0.59, y: 0.62}
+    value: {x: 0.52, y: 0.58}
   intensity:
     overrideState: 1
-    value: 1
+    value: 0
   smoothness:
-    overrideState: 0
-    value: 0.2
+    overrideState: 1
+    value: 1
   roundness:
     overrideState: 0
     value: 1
   rounded:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 1
   mask:
     overrideState: 1
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: f2eddccccda3d1840a456c47ca082a64, type: 3}
     defaultState: 1
   opacity:
     overrideState: 1
-    value: 1
+    value: 0
 --- !u!114 &-6893464942643439041
 MonoBehaviour:
   m_ObjectHideFlags: 3
