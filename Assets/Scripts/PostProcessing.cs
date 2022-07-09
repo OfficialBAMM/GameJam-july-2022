@@ -22,14 +22,14 @@ public class PostProcessing : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.dreamIsBeingDestroyed += ActivateVignet;
-        EventManager.dreamResumed += DisableVignet;
+        EventManager.destroyDreamEvent += ActivateVignet;
+        EventManager.continueDreaming += DisableVignet;
     }
 
     private void OnDisable()
     {
-        EventManager.dreamIsBeingDestroyed -= ActivateVignet;
-        EventManager.dreamResumed += DisableVignet;
+        EventManager.destroyDreamEvent -= ActivateVignet;
+        EventManager.continueDreaming -= DisableVignet;
     }
 
     #endregion EventManager

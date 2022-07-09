@@ -3,17 +3,31 @@ using System;
 
 public class EventManager : MonoBehaviour
 {
-    public static event Action dreamIsBeingDestroyed;
+    public static event Action alarmEvent;
+    public static event Action lightEvent;
+    public static event Action continueDreaming;
+    public static event Action destroyDreamEvent;
 
-    public static event Action dreamResumed;
 
-    public static void DestroyDream()
+    public static void StartAlarmEvent()
     {
-        dreamIsBeingDestroyed?.Invoke();
+        alarmEvent?.Invoke();
+        StartDestroyingDreamEvent();
+    }
+
+    public static void StartLightEvent()
+    {
+        lightEvent?.Invoke();
+        StartDestroyingDreamEvent();
     }
 
     public static void ResumeDream()
     {
-        dreamResumed?.Invoke();
+        continueDreaming?.Invoke();
+    }
+
+    public static void StartDestroyingDreamEvent()
+    {
+        destroyDreamEvent?.Invoke();
     }
 }

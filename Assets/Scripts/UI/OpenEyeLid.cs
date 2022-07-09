@@ -10,14 +10,14 @@ public class OpenEyeLid : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.dreamIsBeingDestroyed += openEyeLid;
-        EventManager.dreamResumed += closeEyeLid;
+        EventManager.destroyDreamEvent += openEyeLid;
+        EventManager.continueDreaming += closeEyeLid;
     }
 
     private void OnDisable()
     {
-        EventManager.dreamIsBeingDestroyed -= openEyeLid;
-        EventManager.dreamResumed += closeEyeLid;
+        EventManager.destroyDreamEvent -= openEyeLid;
+        EventManager.continueDreaming -= closeEyeLid;
     }
 
     #endregion EventManager

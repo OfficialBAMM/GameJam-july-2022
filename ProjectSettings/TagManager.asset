@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Level
   layers:
   - Default
   - TransparentFX
@@ -40,11 +39,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: All the way at the back
     uniqueID: 757085029
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Bottom Leg or arm
     uniqueID: 2596278617
