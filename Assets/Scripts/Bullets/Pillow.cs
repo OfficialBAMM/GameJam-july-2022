@@ -7,9 +7,14 @@ public class Pillow : BasicProjectile
     private float degreesPerSecond = 20;
     private bool enemyHit = false;
 
+    private BoxCollider2D boxCollider;
+
     private void Start()
     {
-        degreesPerSecond = Random.Range(150, 500);
+        base.Start();
+        boxCollider = GetComponent<BoxCollider2D>();
+
+        degreesPerSecond = Random.Range(50, 100) * rb.velocity.magnitude;
     }
 
     // Update is called once per frame
@@ -24,14 +29,19 @@ public class Pillow : BasicProjectile
 
     private void enemyCollision()
     {
+        boxCollider.enabled = false;
         enemyHit = true;
-        rb.velocity = Vector2.zero;
-        rb.gravityScale = 2;
+        rb.gravityScale = 2f;
+
+        if (rb.velocity.x > 0)
+            rb.velocity = Vector2.left;
+        else
+            rb.velocity = Vector2.right;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             enemyCollision();
         }

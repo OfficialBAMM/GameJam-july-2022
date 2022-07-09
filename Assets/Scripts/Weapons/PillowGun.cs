@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class PillowGun : BasicGun
 {
-    [SerializeField] private float bulletSpeed;
-    [SerializeField] private float lookPos;
+    private float bulletSpeed = 10f;
 
     private readonly float firerate = 0.3f;
 

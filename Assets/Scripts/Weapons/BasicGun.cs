@@ -9,8 +9,6 @@ public class BasicGun : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(shootingCooldown);
-
         if (this.shootingCooldown > 0)
             this.shootingCooldown -= Time.deltaTime;
     }

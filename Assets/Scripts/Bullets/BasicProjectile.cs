@@ -10,14 +10,13 @@ public class BasicProjectile : MonoBehaviour
 
     protected Rigidbody2D rb;
 
-    private void Start()
-
+    protected void Start()
     {
         Invoke(nameof(DeleteProjectile), timeToDespawnBullet);
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    protected void Update()
     {
     }
 
