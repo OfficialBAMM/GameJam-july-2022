@@ -1817,14 +1817,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1965518217, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
-      propertyPath: m_ShowToolkit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1965518217, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
-      propertyPath: m_ShowCustomSorter
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5251178151992754072, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1872,14 +1864,6 @@ PrefabInstance:
     - target: {fileID: 6362138008762634954, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
-      objectReference: {fileID: 0}
-    - target: {fileID: 8222286625615058224, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8222286625615058224, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1950122107
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd82c49f5aba1e43ac2d25b53cd6d71, type: 3}

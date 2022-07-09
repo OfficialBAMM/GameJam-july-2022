@@ -6,8 +6,9 @@ public class PillowGun : BasicGun
 
     public override void Shoot()
     {
-        GameObject bullet = Instantiate(this.bullet, bulletSpawnPoint);
+        GameObject bullet = Instantiate(this.bullet);
         Vector3 lookPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        bullet.transform.position = bulletSpawnPoint.position;
 
         float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
