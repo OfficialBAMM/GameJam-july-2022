@@ -4,6 +4,9 @@ public class SceneManager : MonoBehaviour
 {
     public GameObject player;
 
+    public bool gameIsInterrupted'
+
+
     public static SceneManager Instance { get; private set; }
 
     private void Awake()
