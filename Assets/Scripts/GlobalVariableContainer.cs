@@ -4,8 +4,6 @@ public class GlobalVariableContainer : MonoBehaviour
 {
     private GameObject player;
 
-    private bool gameIsInterrupted;
-
     public static GlobalVariableContainer Instance { get; private set; }
 
     private void Awake()
@@ -19,6 +17,11 @@ public class GlobalVariableContainer : MonoBehaviour
             Destroy(gameObject);
         }
 
+        FindPlayer();
+    }
+
+    private void FindPlayer()
+    {
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Player");
         if (gameObjects.Length != 1)
         {
@@ -26,11 +29,11 @@ public class GlobalVariableContainer : MonoBehaviour
             return;
         }
 
-        this.player = gameObjects[0];
+        player = gameObjects[0];
     }
 
     public GameObject GetPlayer()
     {
-        return this.player;
+        return player;
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AlarmClockButton : MonoBehaviour
@@ -24,7 +22,4 @@ public class AlarmClockButton : MonoBehaviour
     {
         animator.SetTrigger("Pressed");
     }
-
-
-
 }

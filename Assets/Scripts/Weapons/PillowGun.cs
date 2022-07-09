@@ -11,7 +11,7 @@ public class PillowGun : BasicGun
         if (!base.allowedToShoot())
             return;
 
-        base.shootingCooldown = firerate;
+        shootingCooldown = firerate;
 
         GameObject bullet = Instantiate(this.bullet);
         Vector2 lookPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
