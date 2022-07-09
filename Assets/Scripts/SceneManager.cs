@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    [System.NonSerialized] public GameObject player;
+    private GameObject player;
 
-    [System.NonSerialized] public bool gameIsInterrupted;
+    private bool gameIsInterrupted;
 
     public static SceneManager Instance { get; private set; }
 
@@ -29,13 +29,8 @@ public class SceneManager : MonoBehaviour
         this.player = gameObjects[0];
     }
 
-    public void GameIsInturrupted()
+    public GameObject GetPlayer()
     {
-        Debug.Log("aight");
-    }
-
-    public void GameIsResumed()
-    {
-        Debug.Log("double aight");
+        return this.player;
     }
 }

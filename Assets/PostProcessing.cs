@@ -18,6 +18,5 @@ public class PostProcessing : MonoBehaviour
 
     public void ActivateVignet()
     {
-
     }
 }
