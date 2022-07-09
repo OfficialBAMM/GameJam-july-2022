@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 195f;
-    [SerializeField] public List<GameObject> dreamList;
+    [SerializeField] public List<GameObject> gunList;
 
     private Rigidbody2D rb;
     private Vector2 input;
@@ -27,26 +27,11 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if (dreamList[0])
+            if (gunList[0])
             {
-                dreamList[0].GetComponent<BasicDream>().Shoot();
-
-                float timeToSleep = dreamList[0].GetComponent<BasicDream>().GetSleepTime();
-
-                IEnumerator coroutine = GoToSleepFor(timeToSleep);
-                StartCoroutine(coroutine);
+                gunList[0].GetComponent<BasicGun>().Shoot();
             }
         }
-    }
-
-    private IEnumerator GoToSleepFor(float sleepTime)
-    {
-        this.isSleeping = true;
-        rb.velocity = new Vector2();
-
-        yield return new WaitForSeconds(sleepTime);
-
-        this.isSleeping = false;
     }
 
     public void FixedUpdate()

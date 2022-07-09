@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -8667871440668387737}
   - component: {fileID: -1949174917442745889}
   m_Layer: 0
-  m_Name: Wolf
+  m_Name: Pillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
