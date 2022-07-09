@@ -6,7 +6,7 @@ using UnityEngine;
 public class BasicProjectile : MonoBehaviour
 {
     [SerializeField]
-    private float timeToDespawnBullet = 5f;
+    protected float timeToDespawnBullet = 1.5f;
 
     protected Rigidbody2D rb;
 

@@ -6,29 +6,21 @@ public class Lama : BasicEnemy
 {
     [Header("SpitBehaviour")]
     [SerializeField] private GameObject attackSpit;
+
     [SerializeField] private GameObject attackSpawnPoint;
     [SerializeField] private float timeBetweenSpit;
 
-
-    [SerializeField] private float attackDistance = 4f;
-
-    [SerializeField] private float detectionDistance = 10f;
-    [SerializeField] private float moveSpeed = 2f;
-
-    private GameObject player;
-    private float distanceToPlayer;
     private bool isAttacking = false;
 
     private void Start()
     {
         minDistance = 5f;
-        player = SceneManager.Instance.GetPlayer();
         health = 10;
     }
 
     private void Update()
     {
-        distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
+        float distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
 
         if (distanceToPlayer >= detectionDistance)
         {
@@ -46,17 +38,7 @@ public class Lama : BasicEnemy
         }
     }
 
-    private void walkIdle()
-    {
-        // TODO: Walk idly
-    }
-
-    private void walkToPlayer()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
-    }
-
-    void AttackPlayer()
+    private void AttackPlayer()
     {
         if (!isAttacking)
         {
@@ -66,7 +48,7 @@ public class Lama : BasicEnemy
         }
     }
 
-    IEnumerator AttackTimer()
+    private IEnumerator AttackTimer()
     {
         yield return new WaitForSeconds(timeBetweenSpit);
         isAttacking = false;

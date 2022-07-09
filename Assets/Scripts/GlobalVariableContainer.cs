@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class GlobalVariableContainer : MonoBehaviour
 {
     private GameObject player;
 
     private bool gameIsInterrupted;
 
-    public static SceneManager Instance { get; private set; }
+    public static GlobalVariableContainer Instance { get; private set; }
 
     private void Awake()
     {
