@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class TurnOnLight : MonoBehaviour
 {
     [SerializeField] Image image;
-    [SerializeField] Color32 dark;
-    [SerializeField] Color32 light;
+    [SerializeField] Color dark;
+    [SerializeField] Color light;
 
     private void OnEnable()
     {

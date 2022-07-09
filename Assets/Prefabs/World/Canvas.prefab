@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5b96311f55df442af5ab3b98f0b1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 29346251989406354}
   dark:
     serializedVersion: 2
     rgba: 4144959
