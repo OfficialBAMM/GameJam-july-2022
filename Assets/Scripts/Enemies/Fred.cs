@@ -8,8 +8,6 @@ public class Fred : BasicEnemy
     [SerializeField] private float detectionDistance = 10f;
     [SerializeField] private float moveSpeed = 2f;
 
-
-
     private GameObject player;
     private float distanceToPlayer;
 
@@ -52,8 +50,8 @@ public class Fred : BasicEnemy
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
-    void AttackPlayer()
+
+    private void AttackPlayer()
     {
-        
     }
 }
