@@ -19,7 +19,6 @@ public class DistortedView : MonoBehaviour
 
     private void DistortView()
     {
-        Debug.Log("Yooooo it's me from distortedView, lesgooo.");
     }
 
     private void NormalizeView()

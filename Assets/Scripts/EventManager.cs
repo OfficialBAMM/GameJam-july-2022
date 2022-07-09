@@ -9,7 +9,6 @@ public class EventManager : MonoBehaviour
 
     public static void GameIsInterrupted()
     {
-        Debug.Log("Wo");
         gameInterrupted?.Invoke();
     }
 
