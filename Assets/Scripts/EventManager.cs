@@ -3,17 +3,17 @@ using System;
 
 public class EventManager : MonoBehaviour
 {
-    public static event Action gameInterrupted;
+    public static event Action dreamIsBeingDestroyed;
 
-    public static event Action gameResumed;
+    public static event Action dreamResumed;
 
-    public static void GameIsInterrupted()
+    public static void DestroyDream()
     {
-        gameInterrupted?.Invoke();
+        dreamIsBeingDestroyed?.Invoke();
     }
 
-    public static void GameResumed()
+    public static void ResumeDream()
     {
-        gameInterrupted?.Invoke();
+        dreamResumed?.Invoke();
     }
 }
