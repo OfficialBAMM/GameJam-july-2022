@@ -33,7 +33,7 @@ public class Pillow : BasicProjectile
         }
     }
 
-    private void enemyCollision()
+    private void destroyPillow()
     {
         boxCollider.enabled = false;
         enemyHit = true;
@@ -47,16 +47,19 @@ public class Pillow : BasicProjectile
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        BasicEnemy enemy = collision?.rigidbody?.GetComponentInParent<BasicEnemy>();
-
+        BasicEnemy enemy = collision.rigidbody?.GetComponentInParent<BasicEnemy>();
         if (enemy)
         {
-            enemyCollision();
+            destroyPillow();
             enemy.GotHit(dmg);
+        }
+        else if (collision.gameObject.CompareTag("Level"))
+        {
+            destroyPillow();
         }
     }
 
-    void PlayAudio()
+    private void PlayAudio()
     {
         audioShoot.pitch = Random.Range(0.8f, 1.2f);
         audioShoot.Play();

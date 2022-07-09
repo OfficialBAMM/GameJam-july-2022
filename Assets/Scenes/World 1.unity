@@ -501,6 +501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 764346659226780831, guid: 0630a809426ed20429b78ee006fae461, type: 3}
+      propertyPath: m_TagString
+      value: Level
+      objectReference: {fileID: 0}
     - target: {fileID: 764346660013970114, guid: 0630a809426ed20429b78ee006fae461, type: 3}
       propertyPath: m_RootOrder
       value: 2
