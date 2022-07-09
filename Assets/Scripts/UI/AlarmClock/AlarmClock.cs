@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Events;
 using TMPro;
 using UnityEngine;
 
@@ -15,31 +12,35 @@ public class AlarmClock : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.alarmEvent += AlarmGoesOff;
-        EventManager.continueDreaming += AlarmStopped;
         animator = GetComponent<Animator>();
         alarmSound = GetComponent<AudioSource>();
     }
 
-    private void OnDisable()
-    {
-        EventManager.alarmEvent -= AlarmGoesOff;
-        EventManager.continueDreaming -= AlarmStopped;
-    }
     private void Update()
     {
         clockText.text = System.DateTime.Now.ToString("HH:mm");
     }
 
-    private void AlarmGoesOff()
+    private void StartAlarm()
     {
         animator.SetTrigger("Alarm");
         alarmSound.Play();
     }
 
-    private void AlarmStopped()
+    private void StopAlarm()
     {
         alarmSound.Stop();
-        //animation stop
+    }
+
+    private void OnEnable()
+    {
+        EventManager.alarmEvent += StartAlarm;
+        EventManager.continueDreaming += StopAlarm;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.alarmEvent -= StartAlarm;
+        EventManager.continueDreaming -= StopAlarm;
     }
 }
