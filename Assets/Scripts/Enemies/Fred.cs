@@ -34,7 +34,7 @@ public class Fred : MonoBehaviour
 
     private void walkIdle()
     {
-        Debug.Log("me is idle");
+        // TODO: Walk idly
     }
 
     private void walkToPlayer()

@@ -8,16 +8,16 @@ public class PostProcessing : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.gameInterrupted += ActivateVignet();
+        EventManager.gameInterrupted += ActivateVignet;
     }
 
     private void OnDisable()
     {
-        EventManager.gameInterrupted -= ActivateVignet();
+        EventManager.gameInterrupted -= ActivateVignet;
     }
 
     public void ActivateVignet()
     {
-        
+
     }
 }
