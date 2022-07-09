@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TurnOnLight : MonoBehaviour
 {
-    [SerializeField] Image image;
-    [SerializeField] Color dark;
-    [SerializeField] Color light;
+    [SerializeField] private Image image;
+    [SerializeField] private Color dark;
+    [SerializeField] private Color light;
 
     private void OnEnable()
     {
@@ -21,13 +19,12 @@ public class TurnOnLight : MonoBehaviour
         EventManager.continueDreaming -= TurnOffTheLight;
     }
 
-
-    void TurnOnTheLight()
+    private void TurnOnTheLight()
     {
         image.color = light;
     }
 
-    void TurnOffTheLight()
+    private void TurnOffTheLight()
     {
         image.color = dark;
     }

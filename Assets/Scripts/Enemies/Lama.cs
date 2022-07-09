@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Lama : BasicEnemy
@@ -24,15 +23,16 @@ public class Lama : BasicEnemy
 
         if (distanceToPlayer >= detectionDistance)
         {
-            this.walkIdle();
+            walkIdle();
             return;
         }
 
         if (distanceToPlayer >= minDistance)
         {
-            this.walkToPlayer();
+            walkToPlayer();
         }
-        else if (distanceToPlayer <= minDistance)
+
+        if (distanceToPlayer <= minDistance)
         {
             AttackPlayer();
         }

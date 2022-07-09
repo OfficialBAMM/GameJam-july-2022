@@ -9,8 +9,8 @@ public class BasicGun : MonoBehaviour
 
     public void Update()
     {
-        if (this.shootingCooldown > 0)
-            this.shootingCooldown -= Time.deltaTime;
+        if (shootingCooldown > 0)
+            shootingCooldown -= Time.deltaTime;
     }
 
     public virtual void Shoot()
@@ -18,6 +18,6 @@ public class BasicGun : MonoBehaviour
 
     public bool allowedToShoot()
     {
-        return this.shootingCooldown <= 0;
+        return shootingCooldown <= 0;
     }
 }

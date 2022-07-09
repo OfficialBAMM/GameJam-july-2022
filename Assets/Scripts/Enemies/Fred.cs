@@ -11,19 +11,20 @@ public class Fred : BasicEnemy
 
     private void Update()
     {
-        distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
+        distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
 
         if (distanceToPlayer >= detectionDistance)
         {
-            this.walkIdle();
+            walkIdle();
             return;
         }
 
         if (distanceToPlayer >= minDistance)
         {
-            this.walkToPlayer();
+            walkToPlayer();
         }
-        else if (distanceToPlayer == minDistance)
+
+        if (distanceToPlayer == minDistance)
         {
             AttackPlayer();
         }

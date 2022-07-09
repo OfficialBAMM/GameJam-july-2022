@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -38,7 +36,6 @@ public class PostProcessing : MonoBehaviour
     {
         volume = GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out vignette);
-
     }
 
     private void Update()
