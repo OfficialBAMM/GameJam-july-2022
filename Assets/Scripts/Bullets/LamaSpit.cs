@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LamaSpit : MonoBehaviour
+public class LamaSpit : BasicProjectile
 {
-    [SerializeField] float shotSpeed;
-    [SerializeField] float despawnTime = 1.5f;
-    [SerializeField] float damage = 1;
-    Vector2 playerPos;
+    [SerializeField] private float shotSpeed;
+    [SerializeField] private float damage = 1;
+    private Vector2 playerPos;
 
     private void Start()
     {
-        GameObject player = SceneManager.Instance.GetPlayer();
+        GameObject player = GlobalVariableContainer.Instance.GetPlayer();
         playerPos = player.transform.position;
-        Destroy(gameObject, despawnTime);
     }
 
     private void Update()
@@ -21,10 +19,8 @@ public class LamaSpit : MonoBehaviour
         MoveTowardsPlayerPosition();
     }
 
-    void MoveTowardsPlayerPosition()
+    private void MoveTowardsPlayerPosition()
     {
         transform.position = Vector2.MoveTowards(transform.position, playerPos, shotSpeed * Time.deltaTime);
     }
-
- 
 }
