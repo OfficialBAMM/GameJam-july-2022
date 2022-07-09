@@ -38,6 +38,7 @@ public class PostProcessing : MonoBehaviour
     {
         volume = GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out vignette);
+
     }
 
     private void Update()
