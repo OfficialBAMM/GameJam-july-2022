@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PostProcessing : MonoBehaviour
 {
+    private PostProcessing postProcessing;
+
     private void OnEnable()
     {
         EventManager.gameInterrupted += ActivateVignet();
@@ -16,6 +18,6 @@ public class PostProcessing : MonoBehaviour
 
     public void ActivateVignet()
     {
-
+        
     }
 }
