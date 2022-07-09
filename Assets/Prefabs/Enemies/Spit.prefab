@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8797210118787321209, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
-  shotSpeed: 5
+  shotSpeed: 3

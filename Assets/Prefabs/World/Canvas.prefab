@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OFF
+  m_text: SNOOZE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4df0e237a2e92ec4db5c58ee7f764796, type: 2}
   m_sharedMaterial: {fileID: 8252786509619490243, guid: 4df0e237a2e92ec4db5c58ee7f764796, type: 2}
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.509434, g: 0.50222504, b: 0.50222504, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

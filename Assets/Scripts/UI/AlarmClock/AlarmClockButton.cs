@@ -12,7 +12,6 @@ public class AlarmClockButton : MonoBehaviour
         {
             Debug.LogError("AlarmClockButton doesn't have animator coupled");
         }
-
     }
 
     public void PushedButton()

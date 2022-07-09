@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Lama : BasicEnemy
 {
+    [Header("SpitBehaviour")]
     [SerializeField] private GameObject attackSpit;
     [SerializeField] private GameObject attackSpawnPoint;
+    [SerializeField] private float timeBetweenSpit;
 
     [SerializeField] private float minDistance = 3f;
     [SerializeField] private float attackDistance = 4f;
@@ -13,10 +15,9 @@ public class Lama : BasicEnemy
     [SerializeField] private float detectionDistance = 10f;
     [SerializeField] private float moveSpeed = 2f;
 
-
-
     private GameObject player;
     private float distanceToPlayer;
+    private bool isAttacking = false;
 
     private void Start()
     {
@@ -45,10 +46,6 @@ public class Lama : BasicEnemy
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-    }
-
     private void walkIdle()
     {
         // TODO: Walk idly
@@ -61,6 +58,17 @@ public class Lama : BasicEnemy
 
     void AttackPlayer()
     {
-        Instantiate(attackSpit, attackSpawnPoint.transform.position, Quaternion.identity);
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            Instantiate(attackSpit, attackSpawnPoint.transform.position, Quaternion.identity);
+            StartCoroutine("AttackTimer");
+        }
+    }
+
+    IEnumerator AttackTimer()
+    {
+        yield return new WaitForSeconds(timeBetweenSpit);
+        isAttacking = false;
     }
 }
