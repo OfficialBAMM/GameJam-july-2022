@@ -329,6 +329,7 @@ MonoBehaviour:
   health: 10
   attackSpit: {fileID: 5163850438973381385, guid: 10b459349a670144897bf774aa7036f6, type: 3}
   attackSpawnPoint: {fileID: 8410969999051021639}
+  timeBetweenSpit: 5
   minDistance: 2
   attackDistance: 4
   detectionDistance: 10
