@@ -11,6 +11,7 @@ public class Fred : BasicEnemy
 
     private void Update()
     {
+        base.Update();
         distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
 
         if (distanceToPlayer >= detectionDistance)
