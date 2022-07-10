@@ -4,11 +4,18 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public static event Action alarmEvent;
+
     public static event Action lightEvent;
+
     public static event Action continueDreaming;
+
     public static event Action destroyDreamEvent;
+
     public static event Action pauseGameEvent;
+
     public static event Action resumeGameEvent;
+
+    public static event Action gameOverEvent;
 
     public static event Action<float> playerGotHitEvent;
 
@@ -41,6 +48,11 @@ public class EventManager : MonoBehaviour
     public static void StartDestroyingDreamEvent()
     {
         destroyDreamEvent?.Invoke();
+    }
+
+    public static void StartGameOverEvent()
+    {
+        gameOverEvent?.Invoke();
     }
 
     private void OnEnable()

@@ -11,6 +11,7 @@ public class RepairDream : MonoBehaviour
     private float healPerSecond;
 
     private bool dreamIsBeingRepaired = false;
+    private bool dreamIsBeingStarted = false;
     private float endingValue;
 
     #region EventManager
@@ -18,21 +19,22 @@ public class RepairDream : MonoBehaviour
     private void OnEnable()
     {
         EventManager.destroyDreamEvent += StopHealing;
-        EventManager.continueDreaming += HealDream;
+        EventManager.continueDreaming += HealDreamPartially;
     }
 
     private void OnDisable()
     {
         EventManager.destroyDreamEvent -= StopHealing;
-        EventManager.continueDreaming -= HealDream;
+        EventManager.continueDreaming -= HealDreamPartially;
     }
 
     #endregion EventManager
 
     private void Start()
     {
+        Invoke(nameof(HealDreamCompletely), 2);
         volume = GetComponent<Volume>();
-        volume.profile.TryGet<Vignette>(out vignette);
+        volume.profile.TryGet(out vignette);
         healPerSecond = GlobalVariableContainer.Instance.damagePerSecond;
     }
 
@@ -46,6 +48,15 @@ public class RepairDream : MonoBehaviour
                 dreamIsBeingRepaired = false;
             }
         }
+
+        if (dreamIsBeingStarted)
+        {
+            vignette.intensity.value -= 0.5f * Time.deltaTime;
+            if (vignette.intensity.value <= endingValue)
+            {
+                dreamIsBeingStarted = false;
+            }
+        }
     }
 
     public void StopHealing()
@@ -53,9 +64,15 @@ public class RepairDream : MonoBehaviour
         dreamIsBeingRepaired = false;
     }
 
-    public void HealDream()
+    public void HealDreamPartially()
     {
         endingValue = vignette.intensity.value - survivalRestorePoints;
         dreamIsBeingRepaired = true;
+    }
+
+    public void HealDreamCompletely()
+    {
+        endingValue = 0;
+        dreamIsBeingStarted = true;
     }
 }
