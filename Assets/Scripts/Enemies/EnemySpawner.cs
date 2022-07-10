@@ -35,4 +35,9 @@ public class EnemySpawner : MonoBehaviour
         int index = Random.Range(0, spawnPoints.Length);
         return spawnPoints[index];
     }
+
+    private void setSecondsBEtweenSpawnBasedONDiffiCULTY()
+    {
+        secondsBetweenSpawns = 3 - (GlobalVariableContainer.Instance.difficulty * 0.2f);
+    }
 }

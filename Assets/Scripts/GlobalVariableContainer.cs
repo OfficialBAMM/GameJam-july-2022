@@ -8,6 +8,8 @@ public class GlobalVariableContainer : MonoBehaviour
 
     public float vignetteValue;
 
+    public int difficulty = 1;
+
     public static GlobalVariableContainer Instance { get; private set; }
 
     private void Awake()

@@ -19,6 +19,7 @@ public class Lama : BasicEnemy
 
     private void Update()
     {
+        base.Update();
         float distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
 
         if (distanceToPlayer >= detectionDistance)

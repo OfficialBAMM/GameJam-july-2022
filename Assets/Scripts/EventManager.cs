@@ -122,6 +122,9 @@ public class EventManager : MonoBehaviour
     private void increaseDifficulty()
     {
         if (timeBetweenEvents > 4)
+        {
             timeBetweenEvents -= 0.5f;
+            GlobalVariableContainer.Instance.difficulty++;
+        }
     }
 }
