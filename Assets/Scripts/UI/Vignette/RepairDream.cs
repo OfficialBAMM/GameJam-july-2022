@@ -41,6 +41,7 @@ public class RepairDream : MonoBehaviour
         if (dreamIsBeingRepaired)
         {
             vignette.intensity.value -= healPerSecond * Time.deltaTime;
+            GlobalVariableContainer.Instance.vignetteValue = vignette.intensity.value;
             if (vignette.intensity.value < endingValue)
             {
                 dreamIsBeingRepaired = false;

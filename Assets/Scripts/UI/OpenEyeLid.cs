@@ -3,30 +3,10 @@ using UnityEngine;
 public class OpenEyeLid : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private float sleepytime;
 
-    #region EventManager
-
-    private void OnEnable()
+    private void Update()
     {
-        EventManager.destroyDreamEvent += openEyeLid;
-        EventManager.continueDreaming += closeEyeLid;
-    }
-
-    private void OnDisable()
-    {
-        EventManager.destroyDreamEvent -= openEyeLid;
-        EventManager.continueDreaming -= closeEyeLid;
-    }
-
-    #endregion EventManager
-
-    private void openEyeLid()
-    {
-        animator.SetBool("OpenLid", true);
-    }
-
-    private void closeEyeLid()
-    {
-        animator.SetBool("OpenLid", false);
+        animator.SetFloat("EyeState", GlobalVariableContainer.Instance.vignetteValue);
     }
 }
