@@ -55,6 +55,21 @@ public class EventManager : MonoBehaviour
         gameOverEvent?.Invoke();
     }
 
+    private void eventStoppedRunning()
+    {
+        eventIsRunning = false;
+    }
+
+    public static void StartPauseGameEvent()
+    {
+        pauseGameEvent?.Invoke();
+    }
+
+    public static void StartResumeGameEvent()
+    {
+        resumeGameEvent?.Invoke();
+    }
+
     private void OnEnable()
     {
         EventManager.continueDreaming += eventStoppedRunning;
@@ -92,20 +107,5 @@ public class EventManager : MonoBehaviour
         //            break;
         //    }
         //}
-    }
-
-    private void eventStoppedRunning()
-    {
-        eventIsRunning = false;
-    }
-
-    public static void StartPauseGameEvent()
-    {
-        pauseGameEvent?.Invoke();
-    }
-
-    public static void StartResumeGameEvent()
-    {
-        resumeGameEvent?.Invoke();
     }
 }

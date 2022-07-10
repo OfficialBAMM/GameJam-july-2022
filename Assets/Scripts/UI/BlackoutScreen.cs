@@ -6,36 +6,13 @@ using UnityEngine.UI;
 public class BlackoutScreen : MonoBehaviour
 {
     [SerializeField] private Image image;
-    bool invisible = true;
-    float transitionSpeed = 50f;
+    private bool invisible = true;
+    private float transitionSpeed = .001f;
 
     private void OnEnable()
     {
         EventManager.pauseGameEvent += FadeIn;
         EventManager.resumeGameEvent += FadeOut;
-    }
-
-    private void Start()
-    {
-        //image = GetComponent<Image>();
-    }
-
-    private void Update()
-    {
-        Color color = image.color;
-
-        if (invisible && color.a < 255)
-        {
-            color.a += transitionSpeed * Time.deltaTime;
-            image.color = color;
-        }
-
-        if (!invisible && color.a > 0)
-        {
-            Debug.Log("make more visible");
-            color.a -= transitionSpeed * Time.deltaTime;
-            image.color = color;
-        }
     }
 
     private void OnDisable()
@@ -44,15 +21,37 @@ public class BlackoutScreen : MonoBehaviour
         EventManager.resumeGameEvent -= FadeOut;
     }
 
-    void FadeIn()
+    private void Start()
     {
-        invisible = true;
-        Debug.Log("YES INVISIBLIITYYYYY");
+        image = GetComponent<Image>();
     }
 
-    void FadeOut()
+    private void Update()
+    {
+        Color color = image.color;
+        Debug.Log(color);
+
+        if (invisible && color.a < 1)
+        {
+            color.a += (transitionSpeed * Time.unscaledTime);
+            Debug.Log(Time.unscaledTime);
+            image.color = color;
+        }
+
+        if (!invisible && color.a > 0)
+        {
+            color.a -= transitionSpeed * Time.unscaledTime;
+            image.color = color;
+        }
+    }
+
+    private void FadeIn()
+    {
+        invisible = true;
+    }
+
+    private void FadeOut()
     {
         invisible = false;
-        Debug.Log("NOOOOOOOOOOO INVISIBLIITYYYYY");
     }
 }

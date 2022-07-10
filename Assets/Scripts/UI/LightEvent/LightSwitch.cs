@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class LightSwitch: MonoBehaviour
+public class LightSwitch : MonoBehaviour
 {
     private bool lightIsOn = false;
-    [SerializeField] GameObject startScreen;
+    [SerializeField] private GameObject startScreen;
 
     private void OnEnable()
     {
@@ -36,7 +36,7 @@ public class LightSwitch: MonoBehaviour
 
     public void HideStartScreen()
     {
-        EventManager.StartResumeGameEvent();
+        Time.timeScale = 1;
         startScreen.SetActive(false);
     }
 }

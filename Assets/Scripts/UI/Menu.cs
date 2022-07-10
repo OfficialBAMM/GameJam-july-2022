@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    bool menuVisible = true;
-    [SerializeField] GameObject menuItems;
-    [SerializeField] GameObject startOfGameItems;
-    [SerializeField] GameObject endOfGameItems;
+    private bool menuVisible = true;
+    [SerializeField] private GameObject menuItems;
+    [SerializeField] private GameObject startOfGameItems;
+    [SerializeField] private GameObject endOfGameItems;
 
     private void OnEnable()
     {
@@ -16,12 +16,13 @@ public class Menu : MonoBehaviour
         EventManager.resumeGameEvent += ToggleMenu;
     }
 
-    void Start()
+    private void Start()
     {
-        EventManager.StartPauseGameEvent();
+        Time.timeScale = 0;
+        //EventManager.StartPauseGameEvent();
     }
 
-    void Update()
+    private void Update()
     {
         CheckInput();
     }
@@ -32,7 +33,7 @@ public class Menu : MonoBehaviour
         EventManager.resumeGameEvent -= ToggleMenu;
     }
 
-    void CheckInput()
+    private void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -44,11 +45,10 @@ public class Menu : MonoBehaviour
             {
                 EventManager.StartPauseGameEvent();
             }
-            
         }
     }
 
-    void ToggleMenu()
+    private void ToggleMenu()
     {
         if (menuVisible)
         {
