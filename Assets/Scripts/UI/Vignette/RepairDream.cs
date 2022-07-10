@@ -1,9 +1,10 @@
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class RepairDream : MonoBehaviour
 {
-    private PostProcessVolume volume;
+    private Volume volume;
     private Vignette vignette;
 
     private float survivalRestorePoints = 0.1f;
@@ -30,8 +31,8 @@ public class RepairDream : MonoBehaviour
 
     private void Start()
     {
-        volume = GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out vignette);
+        volume = GetComponent<Volume>();
+        volume.profile.TryGet<Vignette>(out vignette);
         healPerSecond = GlobalVariableContainer.Instance.damagePerSecond;
     }
 

@@ -1,9 +1,10 @@
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class DestroyDream : MonoBehaviour
 {
-    private PostProcessVolume volume;
+    private Volume volume;
     private Vignette vignette;
 
     private float damagePerSecond;
@@ -29,8 +30,8 @@ public class DestroyDream : MonoBehaviour
 
     private void Start()
     {
-        volume = GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out vignette);
+        volume = GetComponent<Volume>();
+        volume.profile.TryGet<Vignette>(out vignette);
         damagePerSecond = GlobalVariableContainer.Instance.damagePerSecond;
     }
 
@@ -44,10 +45,6 @@ public class DestroyDream : MonoBehaviour
 
     public void DestroyingDream()
     {
-        //lerpStartingValue = vignette.intensity.value;
-        //timeToLerp = 0f;
-        //LerpDuration = remaingTimeLeft / vignette.intensity.value;
-
         dreamIsBeingDestroyed = true;
     }
 
