@@ -112,6 +112,7 @@ public class EventManager : MonoBehaviour
 
     private void increaseDifficulty()
     {
-        timeBetweenEvents -= 0.5f;
+        if (timeBetweenEvents > 4)
+            timeBetweenEvents -= 0.5f;
     }
 }
