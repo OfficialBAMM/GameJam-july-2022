@@ -15,12 +15,16 @@ public class LightBulb : MonoBehaviour
     {
         EventManager.lightEvent += TurnOnLight;
         EventManager.continueDreaming += TurnOffLight;
+        EventManager.pauseGameEvent += TurnOnLight;
+        EventManager.resumeGameEvent += TurnOffLight;
     }
 
     private void OnDisable()
     {
         EventManager.lightEvent -= TurnOnLight;
         EventManager.continueDreaming -= TurnOffLight;
+        EventManager.pauseGameEvent -= TurnOnLight;
+        EventManager.resumeGameEvent -= TurnOffLight;
     }
 
     private void Start()

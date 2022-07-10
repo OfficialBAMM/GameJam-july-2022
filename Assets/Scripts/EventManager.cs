@@ -4,12 +4,11 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public static event Action alarmEvent;
-
     public static event Action lightEvent;
-
     public static event Action continueDreaming;
-
     public static event Action destroyDreamEvent;
+    public static event Action pauseGameEvent;
+    public static event Action resumeGameEvent;
 
     private int timeBetweenEvents = 5;
     private float timeBeforNextEvent = 0;
@@ -81,5 +80,15 @@ public class EventManager : MonoBehaviour
     private void eventStoppedRunning()
     {
         eventIsRunning = false;
+    }
+
+    public static void StartPauseGameEvent()
+    {
+        pauseGameEvent?.Invoke();
+    }
+
+    public static void StartResumeGameEvent()
+    {
+        resumeGameEvent?.Invoke();
     }
 }

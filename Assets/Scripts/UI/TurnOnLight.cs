@@ -10,13 +10,17 @@ public class TurnOnLight : MonoBehaviour
     private void OnEnable()
     {
         EventManager.lightEvent += TurnOnTheLight;
+        EventManager.pauseGameEvent += TurnOnTheLight;
         EventManager.continueDreaming += TurnOffTheLight;
+        EventManager.resumeGameEvent += TurnOffTheLight;
     }
 
     private void OnDisable()
     {
         EventManager.lightEvent -= TurnOnTheLight;
         EventManager.continueDreaming -= TurnOffTheLight;
+        EventManager.pauseGameEvent -= TurnOnTheLight;
+        EventManager.resumeGameEvent -= TurnOffTheLight;
     }
 
     private void TurnOnTheLight()

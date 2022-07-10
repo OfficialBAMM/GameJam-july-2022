@@ -27,4 +27,9 @@ public class TurnLightOff : MonoBehaviour
             lightIsOn = false;
         }
     }
+
+    public void ResumeGame()
+    {
+        EventManager.StartResumeGameEvent();
+    }
 }
