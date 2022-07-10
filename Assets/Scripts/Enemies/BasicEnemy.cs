@@ -41,6 +41,7 @@ public class BasicEnemy : MonoBehaviour
 
     protected void walkToPlayer()
     {
+        //move towards player
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
 }
