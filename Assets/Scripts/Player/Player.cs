@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         {
             if (activeGun)
             {
+                animator.SetTrigger("IsShooting");
                 activeGun.GetComponent<BasicGun>().Shoot();
             }
         }
