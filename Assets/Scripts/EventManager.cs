@@ -20,7 +20,7 @@ public class EventManager : MonoBehaviour
     public static event Action<float> playerGotHitEvent;
 
     private float timeBetweenEvents = 10f;
-    private float timeBeforNextEvent = 0;
+    private float timeBeforNextEvent = 5f;
     private bool eventIsRunning = false;
 
     public static void StartAlarmEvent()

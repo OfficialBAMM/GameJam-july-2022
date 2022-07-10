@@ -6,6 +6,8 @@ public class GlobalVariableContainer : MonoBehaviour
 
     public float damagePerSecond = 0.1f;
 
+    public float vignetteValue;
+
     public static GlobalVariableContainer Instance { get; private set; }
 
     private void Awake()
