@@ -268,6 +268,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8797210117561087273, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.276611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797210117561087273, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1373829
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797210117561087273, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000001490116
+      objectReference: {fileID: 0}
     - target: {fileID: 8797210117876888573, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7622204
@@ -286,19 +298,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118106766230, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.954728
+      value: 0.96367514
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118106766230, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000000028088156
+      value: -0.000000002954383
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118106766230, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000109268
+      value: -0.000000010873623
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118106766230, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.29748008
+      value: 0.2670774
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797210118106766230, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -29.064
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118307685218, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w
@@ -342,11 +358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118584166654, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9989619
+      value: 0.9994918
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118584166654, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.04555377
+      value: 0.03187669
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118787321209, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_Name
@@ -398,19 +414,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118953868287, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6494339
+      value: 0.6832617
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118953868287, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000008198724
+      value: 0.0000000081884
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118953868287, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000007750183
+      value: 0.000000007740423
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118953868287, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7604181
+      value: -0.73017365
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797210118953868287, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -92.799
       objectReference: {fileID: 0}
     - target: {fileID: 8797210118958609740, guid: a4759cb282f192b4291f4253dd709f56, type: 3}
       propertyPath: m_LocalRotation.w

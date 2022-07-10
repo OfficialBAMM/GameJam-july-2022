@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class SpiderAttack : MonoBehaviour
 {
-
-    float walkspeed = 70f;
-    Vector3 currentPos;
-    bool startCreeping = false;
+    private float walkspeed = 70f;
+    private Vector3 currentPos;
+    private bool startCreeping = false;
 
     private void OnEnable()
     {
@@ -23,6 +22,7 @@ public class SpiderAttack : MonoBehaviour
     {
         currentPos = transform.position;
     }
+
     private void Update()
     {
         if (startCreeping)
@@ -31,10 +31,10 @@ public class SpiderAttack : MonoBehaviour
         }
     }
 
-    void StartCreeping()
+    private void StartCreeping()
     {
         startCreeping = true;
-        if(transform.position.y >= -121)
+        if (transform.position.y >= -121)
         {
             Vector3 newPos = transform.position;
             newPos.y += walkspeed * Time.deltaTime;
@@ -46,5 +46,6 @@ public class SpiderAttack : MonoBehaviour
     {
         transform.position = currentPos;
         startCreeping = false;
+        EventManager.ResumeDream();
     }
 }
