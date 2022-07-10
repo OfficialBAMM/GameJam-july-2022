@@ -16,6 +16,8 @@ public class BasicEnemy : MonoBehaviour
 
     [SerializeField] protected int health;
 
+    protected bool dead = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,13 +25,22 @@ public class BasicEnemy : MonoBehaviour
         player = GlobalVariableContainer.Instance.GetPlayer();
     }
 
+    protected void Update()
+    {
+        if (dead)
+        {
+            transform.Rotate(0f, 0f, 500f * Time.deltaTime);
+        }
+    }
+
     public void GotHit(int dmg)
     {
         health -= dmg;
         if (health < 0)
         {
+            dead = true;
             boxCollider.enabled = false;
-            rb.gravityScale = 2f;
+            rb.gravityScale = 2.5f;
             rb.velocity = Vector2.left * 2;
         }
     }
