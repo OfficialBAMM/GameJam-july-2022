@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     bool menuVisible = true;
-    [SerializeField] GameObject menuButtons;
+    [SerializeField] GameObject menuItems;
+    [SerializeField] GameObject startOfGameItems;
+    [SerializeField] GameObject endOfGameItems;
 
     private void OnEnable()
     {
@@ -16,12 +18,7 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.buildIndex != 0)
-        {
-            ToggleMenu();
-        }
-
+        EventManager.StartPauseGameEvent();
     }
 
     void Update()
@@ -55,13 +52,13 @@ public class Menu : MonoBehaviour
     {
         if (menuVisible)
         {
-            menuButtons.SetActive(false);
+            menuItems.SetActive(false);
             menuVisible = false;
             Time.timeScale = 1;
         }
         else
         {
-            menuButtons.SetActive(true);
+            menuItems.SetActive(true);
             menuVisible = true;
             Time.timeScale = 0;
         }
