@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 3098892063641087453}
   - component: {fileID: 7240581833143414828}
   - component: {fileID: 235906273976892017}
-  - component: {fileID: 5179963399664518885}
+  - component: {fileID: 846084135}
   m_Layer: 5
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -387,9 +387,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5179963399664518885}
-        m_TargetAssemblyTypeName: TurnLightOff, Assembly-CSharp
-        m_MethodName: DisableLightSwitch
+      - m_Target: {fileID: 846084135}
+        m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+        m_MethodName: TurnOffLight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -399,7 +399,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5179963399664518885
+--- !u!114 &846084135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 304040407592162303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b87928bced3c564fb149cfa09c51375, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fb6f17983972654dbb5745aad60dd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2559596805197683413
@@ -1557,7 +1557,7 @@ GameObject:
   - component: {fileID: 2362847259003112665}
   - component: {fileID: 5095550745977994184}
   - component: {fileID: 29346251989406354}
-  - component: {fileID: 8220660454075598397}
+  - component: {fileID: 1996273282}
   m_Layer: 5
   m_Name: Background Lighting
   m_TagString: Untagged
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8220660454075598397
+--- !u!114 &1996273282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1632,12 +1632,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6931498510889949353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5b96311f55df442af5ab3b98f0b1c1, type: 3}
+  m_Script: {fileID: 11500000, guid: dce2cd5c12ea07a41963e0c323978030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 29346251989406354}
   dark: {r: 0.12941177, g: 0.11764706, b: 0.12156863, a: 1}
-  light: {r: 0.496, g: 0.45331147, b: 0.3293115, a: 1}
+  light: {r: 0.624, g: 0.5286684, b: 0.26083198, a: 1}
 --- !u!1 &7196571694995046724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 5729719607396134885}
   - component: {fileID: 4393025419869575715}
   - component: {fileID: 8615594567789081676}
-  - component: {fileID: 7605945596445372867}
+  - component: {fileID: 200563425}
   m_Layer: 5
   m_Name: LightBulb
   m_TagString: Untagged
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7605945596445372867
+--- !u!114 &200563425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7196571694995046724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6554cf3542aa60048868c0c11276317f, type: 3}
+  m_Script: {fileID: 11500000, guid: 60180ad1824ea1f44b65b35b4f27df16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imageLightOn: {fileID: 21300000, guid: 92c158f43a4cf7f4ea1e3287735fbe79, type: 3}

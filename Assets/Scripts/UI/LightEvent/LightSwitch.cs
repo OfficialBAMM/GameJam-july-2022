@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TurnLightOff : MonoBehaviour
+public class LightSwitch: MonoBehaviour
 {
     private bool lightIsOn = false;
 
@@ -19,7 +19,7 @@ public class TurnLightOff : MonoBehaviour
         lightIsOn = true;
     }
 
-    public void DisableLightSwitch()
+    public void TurnOffLight()
     {
         if (lightIsOn)
         {
