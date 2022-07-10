@@ -19,7 +19,6 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 0;
-        //EventManager.StartPauseGameEvent();
     }
 
     private void Update()

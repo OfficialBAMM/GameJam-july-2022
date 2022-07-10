@@ -19,7 +19,7 @@ public class EventManager : MonoBehaviour
 
     public static event Action<float> playerGotHitEvent;
 
-    private int timeBetweenEvents = 5;
+    private float timeBetweenEvents = 10f;
     private float timeBeforNextEvent = 0;
     private bool eventIsRunning = false;
 
@@ -82,30 +82,36 @@ public class EventManager : MonoBehaviour
 
     private void Update()
     {
-        //if (eventIsRunning)
-        //    return;
+        if (eventIsRunning)
+            return;
 
-        //if (timeBeforNextEvent > 0)
-        //    timeBeforNextEvent -= Time.deltaTime;
+        if (timeBeforNextEvent > 0)
+            timeBeforNextEvent -= Time.deltaTime;
 
-        //if (timeBeforNextEvent <= 0)
-        //{
-        //    eventIsRunning = true;
-        //    timeBeforNextEvent = timeBetweenEvents;
+        if (timeBeforNextEvent <= 0)
+        {
+            eventIsRunning = true;
+            timeBeforNextEvent = timeBetweenEvents;
+            increaseDifficulty();
 
-        //    switch (UnityEngine.Random.Range(0, 2))
-        //    {
-        //        case 0:
-        //            StartAlarmEvent();
-        //            break;
+            switch (UnityEngine.Random.Range(0, 2))
+            {
+                case 0:
+                    StartAlarmEvent();
+                    break;
 
-        //        case 1:
-        //            StartLightEvent();
-        //            break;
+                case 1:
+                    StartLightEvent();
+                    break;
 
-        //        default:
-        //            break;
-        //    }
-        //}
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void increaseDifficulty()
+    {
+        timeBetweenEvents -= 0.5f;
     }
 }

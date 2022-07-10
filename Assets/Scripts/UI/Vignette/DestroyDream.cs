@@ -37,14 +37,15 @@ public class DestroyDream : MonoBehaviour
 
     private void Update()
     {
+        if (vignette.intensity.value >= 0.95)
+        {
+            EventManager.StartGameOverEvent();
+            vignette.intensity.value = 0;
+        }
+
         if (dreamIsBeingDestroyed)
         {
             vignette.intensity.value += damagePerSecond * Time.deltaTime;
-
-            if (vignette.intensity.value >= 1)
-            {
-                EventManager.StartGameOverEvent();
-            }
         }
     }
 

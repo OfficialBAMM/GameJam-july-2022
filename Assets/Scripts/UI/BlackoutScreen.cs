@@ -12,12 +12,14 @@ public class BlackoutScreen : MonoBehaviour
     private void OnEnable()
     {
         EventManager.pauseGameEvent += FadeIn;
+        EventManager.gameOverEvent += FadeIn;
         EventManager.resumeGameEvent += FadeOut;
     }
 
     private void OnDisable()
     {
         EventManager.pauseGameEvent -= FadeIn;
+        EventManager.gameOverEvent -= FadeIn;
         EventManager.resumeGameEvent -= FadeOut;
     }
 
@@ -29,12 +31,10 @@ public class BlackoutScreen : MonoBehaviour
     private void Update()
     {
         Color color = image.color;
-        Debug.Log(color);
 
         if (invisible && color.a < 1)
         {
             color.a += (transitionSpeed * Time.unscaledTime);
-            Debug.Log(Time.unscaledTime);
             image.color = color;
         }
 

@@ -252,6 +252,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 534389691, guid: 0630a809426ed20429b78ee006fae461, type: 3}
   m_PrefabInstance: {fileID: 1450000102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &572023988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8078933366964534101, guid: bdab4ac549f2d1a429cd60c900dd0c3c, type: 3}
+  m_PrefabInstance: {fileID: 1065742775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658427222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +782,24 @@ MonoBehaviour:
   enemies:
   - {fileID: 3829540107718306531, guid: fb4cef25a483427499f03fddc57c78aa, type: 3}
   secondsBetweenSpawns: 3
+--- !u!1 &1740760524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1403815326894747525, guid: 934609c6a5b550a40a66fd97d42c601a, type: 3}
+  m_PrefabInstance: {fileID: 377949273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1740760528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740760524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c799bf2db7db1e47a16705e252f6add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartScreen: {fileID: 572023988}
 --- !u!1 &1925553089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1925553089, guid: 0630a809426ed20429b78ee006fae461, type: 3}
