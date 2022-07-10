@@ -1,27 +1,23 @@
 using System;
 using UnityEngine;
 
+
 public class EventManager : MonoBehaviour
 {
     public static event Action alarmEvent;
-
     public static event Action lightEvent;
-
     public static event Action continueDreaming;
-
     public static event Action destroyDreamEvent;
-
     public static event Action pauseGameEvent;
-
     public static event Action resumeGameEvent;
-
     public static event Action gameOverEvent;
-
     public static event Action<float> playerGotHitEvent;
 
     private float timeBetweenEvents = 10f;
-    private float timeBeforNextEvent = 0;
+    private float timeBeforNextEvent = 5;
     private bool eventIsRunning = false;
+    [SerializeField] AudioSource snore;
+
 
     public static void StartAlarmEvent()
     {
@@ -42,7 +38,7 @@ public class EventManager : MonoBehaviour
 
     public static void ResumeDream()
     {
-        continueDreaming?.Invoke();
+        continueDreaming?.Invoke();        
     }
 
     public static void StartDestroyingDreamEvent()

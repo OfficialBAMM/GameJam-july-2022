@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     private bool menuVisible = true;
     [SerializeField] private GameObject menuItems;
     [SerializeField] private GameObject startOfGameItems;
-    [SerializeField] private GameObject endOfGameItems;
+    [SerializeField] AudioSource audio;
 
     private void OnEnable()
     {
@@ -54,11 +54,13 @@ public class Menu : MonoBehaviour
             menuItems.SetActive(false);
             menuVisible = false;
             Time.timeScale = 1;
+            audio.Play();
         }
         else
         {
             menuItems.SetActive(true);
             menuVisible = true;
+            audio.Stop();
             Time.timeScale = 0;
         }
     }
