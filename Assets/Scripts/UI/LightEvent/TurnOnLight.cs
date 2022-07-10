@@ -5,7 +5,7 @@ public class TurnOnLight : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private Color dark;
-    [SerializeField] private Color light;
+    [SerializeField] private new Color light;
 
     private void OnEnable()
     {

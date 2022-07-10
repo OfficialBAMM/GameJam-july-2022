@@ -4,6 +4,8 @@ public class GlobalVariableContainer : MonoBehaviour
 {
     private GameObject player;
 
+    public float damagePerSecond = 0.1f;
+
     public static GlobalVariableContainer Instance { get; private set; }
 
     private void Awake()
