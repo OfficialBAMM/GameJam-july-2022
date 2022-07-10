@@ -8,8 +8,6 @@ public class DestroyDream : MonoBehaviour
     private Vignette vignette;
 
     private float damagePerSecond;
-
-    // Dream is being destroyed variables
     private bool dreamIsBeingDestroyed = false;
 
     #region EventManager
@@ -18,12 +16,14 @@ public class DestroyDream : MonoBehaviour
     {
         EventManager.destroyDreamEvent += DestroyingDream;
         EventManager.continueDreaming += ContinueDreaming;
+        EventManager.playerGotHitEvent += PlayerGotHit;
     }
 
     private void OnDisable()
     {
         EventManager.destroyDreamEvent -= DestroyingDream;
         EventManager.continueDreaming -= ContinueDreaming;
+        EventManager.playerGotHitEvent -= PlayerGotHit;
     }
 
     #endregion EventManager
@@ -41,6 +41,11 @@ public class DestroyDream : MonoBehaviour
         {
             vignette.intensity.value += damagePerSecond * Time.deltaTime;
         }
+    }
+
+    private void PlayerGotHit(float dmg)
+    {
+        vignette.intensity.value += dmg;
     }
 
     public void DestroyingDream()
