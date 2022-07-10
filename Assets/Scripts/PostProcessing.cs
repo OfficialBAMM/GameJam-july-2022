@@ -3,8 +3,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessing : MonoBehaviour
 {
-    private PostProcessVolume volume;
-    private Vignette vignette;
+    private UnityEngine.Rendering.VolumeProfile volume;
+    private UnityEngine.Rendering.Universal.Vignette vignette;
 
     private bool dreamIsBeingDestroyed = false;
 
@@ -15,6 +15,7 @@ public class PostProcessing : MonoBehaviour
 
     private float timeElapsed;
     private float valueToLerp;
+    
 
     #region EventManager
 
@@ -34,8 +35,7 @@ public class PostProcessing : MonoBehaviour
 
     private void Start()
     {
-        volume = GetComponent<PostProcessVolume>();
-        volume.profile.TryGetSettings(out vignette);
+        volume = GetComponent<UnityEngine.Rendering.Volume>()?.profile;
     }
 
     private void Update()
