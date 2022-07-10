@@ -54,6 +54,7 @@ public class DestroyDream : MonoBehaviour
     private void PlayerGotHit(float dmg)
     {
         vignette.intensity.value += dmg;
+        GlobalVariableContainer.Instance.vignetteValue = vignette.intensity.value;
     }
 
     public void DestroyingDream()
