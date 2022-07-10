@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour
         {
             ToggleMenu();
         }
+
     }
 
     void Update()
