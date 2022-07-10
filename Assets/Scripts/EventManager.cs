@@ -7,6 +7,8 @@ public class EventManager : MonoBehaviour
 
     public static event Action lightEvent;
 
+    public static event Action spiderEvent;
+
     public static event Action continueDreaming;
 
     public static event Action destroyDreamEvent;
@@ -32,6 +34,12 @@ public class EventManager : MonoBehaviour
     public static void StartLightEvent()
     {
         lightEvent?.Invoke();
+        StartDestroyingDreamEvent();
+    }
+
+    public static void StartSpiderEvent()
+    {
+        spiderEvent?.Invoke();
         StartDestroyingDreamEvent();
     }
 
@@ -94,16 +102,17 @@ public class EventManager : MonoBehaviour
             timeBeforNextEvent = timeBetweenEvents;
             increaseDifficulty();
 
-            switch (UnityEngine.Random.Range(0, 2))
+            switch (UnityEngine.Random.Range(0, 3))
             {
                 case 0:
                     StartAlarmEvent();
                     break;
-
                 case 1:
-                    StartLightEvent();
+                    StartLightEvent();                  
                     break;
-
+                case 2:
+                    StartSpiderEvent();
+                    break;
                 default:
                     break;
             }
