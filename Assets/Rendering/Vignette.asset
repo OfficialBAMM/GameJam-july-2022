@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: NEW PostProcessing Profile
+  m_Name: Vignette
   m_EditorClassIdentifier: 
   components:
   - {fileID: 8720001390033177331}
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Value: {x: 0.53, y: 0.56}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 0.293
   smoothness:
     m_OverrideState: 1
     m_Value: 1
